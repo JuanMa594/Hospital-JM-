@@ -1,4 +1,7 @@
-# 🏥 Proyecto: Sistema de Gestión de Inventario de Medicamentos
+**Este proyecto nace a partir de un trabajo colaborativo académico.**
+**Actualmente es mantenido y extendido de forma independiente.**
+
+# Sistema de Gestión de Inventario de Medicamentos
 
 API y Frontend para la gestión integral de inventario de medicamentos, con enfoque en trazabilidad, alertas de stock/vencimiento y arquitectura limpia.
 
