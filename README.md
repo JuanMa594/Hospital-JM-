@@ -7,18 +7,18 @@ API y Frontend para la gestión integral de inventario de medicamentos, con enfo
 
 ---
 
-## 📋 Tabla de Contenidos
-- [🚀 Quickstart: Ejecuta el Proyecto](#-quickstart-ejecuta-el-proyecto)
-- [🌟 Arquitectura y Patrones Implementados](#-arquitectura-y-patrones-implementados)
-- [📁 Estructura Detallada del Repositorio](#-estructura-detallada-del-repositorio)
-- [🔗 Endpoints Principales de la API](#-endpoints-principales-de-la-api)
-- [🛠️ Utilidades y Scripts](#-utilidades-y-scripts)
-- [✅ Pruebas Unitarias](#-pruebas-unitarias)
-- [🖼️ Galería de Imágenes](#-galería-de-imágenes)
+## Tabla de Contenidos
+- [Quickstart: Ejecuta el Proyecto](#-quickstart-ejecuta-el-proyecto)
+- [Arquitectura y Patrones Implementados](#-arquitectura-y-patrones-implementados)
+- [Estructura Detallada del Repositorio](#-estructura-detallada-del-repositorio)
+- [Endpoints Principales de la API](#-endpoints-principales-de-la-api)
+- [Utilidades y Scripts](#-utilidades-y-scripts)
+- [Pruebas Unitarias](#-pruebas-unitarias)
+- [Galería de Imágenes](#-galería-de-imágenes)
 
 ---
 
-## 🚀 Quickstart: Ejecuta el Proyecto
+## Quickstart: Ejecuta el Proyecto
 
 ### Requisitos Previos
 
@@ -26,13 +26,14 @@ API y Frontend para la gestión integral de inventario de medicamentos, con enfo
 * **Frontend (.NET):** .NET 7/8/9 SDK
 * **Base de Datos:** SQL Server o SQLite (opcional, para desarrollo).
 
-### ⚙️ 1. Configuración del Backend (FastAPI)
+### 1. Configuración del Backend (FastAPI)
 
 1.  **Crear Entorno Virtual e Instalar Dependencias:**
     ```powershell
+    cd BackEnd
     python -m venv .venv
-    .\.venv\Scripts\Activate.ps1
-    pip install -r backend/requirements.txt
+    venv\Scripts\activate
+    pip install -r requirements.txt
     ```
 
 2.  **Variables de Entorno:**
@@ -51,7 +52,7 @@ API y Frontend para la gestión integral de inventario de medicamentos, con enfo
     ```
     *(El servidor backend estará disponible en `http://127.0.0.1:8000`)*
 
-### 🖥️ 2. Ejecución del Frontend (Blazor Server)
+### 2. Ejecución del Frontend (Blazor Server)
 
 1.  **Navegar e Iniciar:**
     ```bash
@@ -63,7 +64,7 @@ API y Frontend para la gestión integral de inventario de medicamentos, con enfo
 
 ---
 
-## 🌟 Arquitectura y Patrones Implementados
+## Arquitectura y Patrones Implementados
 
 El proyecto sigue una arquitectura modular y limpia, basada en Python/FastAPI para el backend.
 
@@ -78,7 +79,7 @@ El proyecto sigue una arquitectura modular y limpia, basada en Python/FastAPI pa
 
 ---
 
-## 📁 Estructura Detallada del Repositorio
+## Estructura Detallada del Repositorio
 
 | Carpeta / Archivo | Componente | Descripción de Contenido |
 | :--- | :--- | :--- |
@@ -96,7 +97,7 @@ El proyecto sigue una arquitectura modular y limpia, basada en Python/FastAPI pa
 
 ---
 
-## 🔗 Endpoints Principales de la API
+## Endpoints Principales de la API
 
 | Funcionalidad | Método | Ruta (Ejemplo) | Descripción | Archivo Fuente |
 | :--- | :--- | :--- | :--- | :--- |
@@ -109,7 +110,7 @@ El proyecto sigue una arquitectura modular y limpia, basada en Python/FastAPI pa
 
 ---
 
-## 🛠️ Utilidades y Scripts
+## Utilidades y Scripts
 
 Los scripts son herramientas clave para el mantenimiento y desarrollo:
 
@@ -121,7 +122,7 @@ Los scripts son herramientas clave para el mantenimiento y desarrollo:
 
 ---
 
-## ✅ Pruebas Unitarias
+## Pruebas Unitarias
 
 El backend utiliza `pytest` para la ejecución de pruebas.
 
@@ -133,7 +134,7 @@ pytest -q
 
 ---
 
-## 🖼️ Galería de Imágenes
+## Galería de Imágenes
 
 A continuación se presentan capturas de pantalla de la interfaz de usuario del sistema:
 
