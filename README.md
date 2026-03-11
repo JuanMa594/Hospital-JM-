@@ -8,13 +8,13 @@ API y Frontend para la gestión integral de inventario de medicamentos, con enfo
 ---
 
 ## Tabla de Contenidos
-- [Quickstart: Ejecuta el Proyecto](#-quickstart-ejecuta-el-proyecto)
-- [Arquitectura y Patrones Implementados](#-arquitectura-y-patrones-implementados)
-- [Estructura Detallada del Repositorio](#-estructura-detallada-del-repositorio)
-- [Endpoints Principales de la API](#-endpoints-principales-de-la-api)
-- [Utilidades y Scripts](#-utilidades-y-scripts)
-- [Pruebas Unitarias](#-pruebas-unitarias)
-- [Galería de Imágenes](#-galería-de-imágenes)
+- [Quickstart: Ejecuta el Proyecto](#quickstart-ejecuta-el-proyecto)
+- [Arquitectura y Patrones Implementados](#arquitectura-y-patrones-implementados)
+- [Estructura Detallada del Repositorio](#estructura-detallada-del-repositorio)
+- [Endpoints Principales de la API](#endpoints-principales-de-la-api)
+- [Utilidades y Scripts](#utilidades-y-scripts)
+- [Pruebas Unitarias](#pruebas-unitarias)
+- [Galería de Imágenes](#galería-de-imágenes)
 
 ---
 
