@@ -7,6 +7,17 @@ API y Frontend para la gestión integral de inventario de medicamentos, con enfo
 
 ---
 
+## 📋 Tabla de Contenidos
+- [🚀 Quickstart: Ejecuta el Proyecto](#-quickstart-ejecuta-el-proyecto)
+- [🌟 Arquitectura y Patrones Implementados](#-arquitectura-y-patrones-implementados)
+- [📁 Estructura Detallada del Repositorio](#-estructura-detallada-del-repositorio)
+- [🔗 Endpoints Principales de la API](#-endpoints-principales-de-la-api)
+- [🛠️ Utilidades y Scripts](#-utilidades-y-scripts)
+- [✅ Pruebas Unitarias](#-pruebas-unitarias)
+- [🖼️ Galería de Imágenes](#-galería-de-imágenes)
+
+---
+
 ## 🚀 Quickstart: Ejecuta el Proyecto
 
 ### Requisitos Previos
@@ -118,3 +129,28 @@ El backend utiliza `pytest` para la ejecución de pruebas.
 cd backend
 pip install -r requirements.txt # Asegurar dependencias de test
 pytest -q
+```
+
+---
+
+## 🖼️ Galería de Imágenes
+
+A continuación se presentan capturas de pantalla de la interfaz de usuario del sistema:
+
+### 1. Inicio de Sesión
+![Login](Images/Image1(Login).png)
+
+### 2. Panel Principal
+![Principal](Images/Image2(Principal).png)
+
+### 3. Gestión de Inventario
+![Inventario](Images/Image3(Inventory).png)
+
+### 4. Sistema de Alertas
+![Alertas](Images/Image4(Alerts).png)
+
+### 5. Registro de Ventas
+![Ventas](Images/Image5(Sales).png)
+
+### 6. Gestión de Proveedores
+![Proveedores](Images/Image6(Suppliers).png)
