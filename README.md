@@ -8,13 +8,14 @@ API y Frontend para la gestión integral de inventario de medicamentos, con enfo
 ---
 
 ## Tabla de Contenidos
-- [Quickstart: Ejecuta el Proyecto](#-quickstart-ejecuta-el-proyecto)
-- [Arquitectura y Patrones Implementados](#-arquitectura-y-patrones-implementados)
-- [Estructura Detallada del Repositorio](#-estructura-detallada-del-repositorio)
-- [Endpoints Principales de la API](#-endpoints-principales-de-la-api)
+- [Quickstart: Ejecuta el Proyecto](#quickstart-ejecuta-el-proyecto)
+- [Control de Acceso y Roles](#control-de-acceso-y-roles)
+- [Arquitectura y Patrones Implementados](#arquitectura-y-patrones-implementados)
+- [Estructura Detallada del Repositorio](#estructura-detallada-del-repositorio)
+- [Endpoints Principales de la API](#endpoints-principales-de-la-api)
 - [Utilidades y Scripts](#-utilidades-y-scripts)
-- [Pruebas Unitarias](#-pruebas-unitarias)
-- [Galería de Imágenes](#-galería-de-imágenes)
+- [Pruebas Unitarias](#pruebas-unitarias)
+- [Galería de Imágenes](#galería-de-imágenes)
 
 ---
 
@@ -61,6 +62,17 @@ API y Frontend para la gestión integral de inventario de medicamentos, con enfo
     dotnet run --project FrontEndBlazor.csproj
     ```
 2.  **Acceso:** Abre tu navegador y navega a la dirección indicada (típicamente `http://localhost:port`).
+
+---
+
+## Control de Acceso y Roles
+
+El sistema implementa un control de acceso basado en roles para proteger las funcionalidades sensibles. Para facilitar las pruebas y la exploración inicial del proyecto tras clonarlo, puede utilizar las siguientes credenciales de administrador:
+
+*   **Usuario:** `santiago`
+*   **Contraseña:** `contrasena123`
+
+Con este usuario tendrá acceso total a todas las secciones del sistema, incluyendo la gestión de inventario, proveedores, ventas y visualización de auditorías.
 
 ---
 
