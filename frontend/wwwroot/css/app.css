@@ -1,21 +1,26 @@
-html, body {
+html,
+body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 :root {
-  --color-primary: #A3C4F3;
-  --color-primary-rgb: 163, 196, 243; /* equivalente a #A3C4F3 para transparencia */ 
-  --color-bg-rgb: #E0F0FF; /* mismos valores del color anterior, se usará para un poco de transparencia */
-  --color-primary-dark: #5A84C9; 
-  --color-secondary: #B8E0D2; 
-  --color-accent: #F4A896;
-  --color-error: #E57373;
-  --color-bg: #F9F9F9;
-  --color-surface: #E5E5E5; /* para tarjetas y paneles */
-  --color-text: #333333;
-  --color-text-secondary: #666666;
-  --color-text-invert: #FFFFFF;
+    --color-primary: #A3C4F3;
+    --color-primary-rgb: 163, 196, 243;
+    /* equivalente a #A3C4F3 para transparencia */
+    --color-bg-rgb: #E0F0FF;
+    /* mismos valores del color anterior, se usará para un poco de transparencia */
+    --color-primary-dark: #5A84C9;
+    --color-secondary: #B8E0D2;
+    --color-accent: #F4A896;
+    --color-error: #E57373;
+    --color-bg: #F9F9F9;
+    --color-surface: #E5E5E5;
+    /* para tarjetas y paneles */
+    --color-text: #333333;
+    --color-text-secondary: #666666;
+    --color-text-invert: #FFFFFF;
 }
+
 body {
     background-image: url('/LoginBG.jpg');
     background-size: cover;
@@ -24,6 +29,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* ==================== MAIN LAYOUT STRUCTURE ==================== */
 .page {
     position: relative;
@@ -46,13 +52,15 @@ main {
     align-items: center;
 }
 
-.top-row ::deep a, .top-row ::deep .btn-link {
+.top-row ::deep a,
+.top-row ::deep .btn-link {
     white-space: nowrap;
     margin-left: 1.5rem;
     text-decoration: none;
 }
 
-.top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
+.top-row ::deep a:hover,
+.top-row ::deep .btn-link:hover {
     text-decoration: underline;
 }
 
@@ -67,7 +75,8 @@ main {
         justify-content: space-between;
     }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
+    .top-row ::deep a,
+    .top-row ::deep .btn-link {
         margin-left: 0;
     }
 }
@@ -89,7 +98,8 @@ main {
         width: 0;
     }
 
-    .top-row, article {
+    .top-row,
+    article {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
@@ -120,30 +130,34 @@ main {
 
 /* ================== BARRA DE NAVEGACIÓN ===================== */
 .navbar-custom {
-  background-color: var(--color-primary-dark) !important;
-  color: var(--color-text-invert);
-  width: 250px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 1rem;
-  border-bottom: none;
+    background-color: var(--color-primary-dark) !important;
+    color: var(--color-text-invert);
+    width: 250px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    border-bottom: none;
 }
 
 /* Asegurar que el container-fluid también tenga el color */
 .navbar-custom .container-fluid {
-  background-color: var(--color-primary-dark) !important;
-  padding: 0;
+    background-color: var(--color-primary-dark) !important;
+    padding: 0;
 }
+
 /* Color para el botón toggler */
 .navbar-custom .navbar-toggler {
-  border-color: var(--color-text-invert);
+    border-color: var(--color-text-invert);
 }
+
 .navbar-custom .navbar-brand {
     color: var(--color-text-invert);
     font-weight: 600;
 }
+
 .navbar-custom .nav-link {
     color: var(--color-text-invert);
 }
+
 .navbar-custom .nav-link.active {
     background-color: var(--color-primary);
     border-radius: 8px;
@@ -165,11 +179,12 @@ main {
     .collapse:not(.show) {
         transform: translateX(0);
     }
-    
+
     .navbar-toggler {
         display: none !important;
     }
 }
+
 .nav-scrollable .nav-link {
     color: var(--color-text);
     padding: 0.5rem 1rem;
@@ -178,6 +193,7 @@ main {
     display: flex;
     align-items: center;
 }
+
 .logo-hospital {
     width: 40px;
     height: auto;
@@ -210,7 +226,7 @@ main {
     }
 }
 
-/* ===================== PANEL LATERAL ========================== */ 
+/* ===================== PANEL LATERAL ========================== */
 /*.nav-scrollable { /* Maneja el scroll del sidebar
     position: fixed;
     top: 56px;
@@ -225,22 +241,29 @@ main {
 */
 /* Forzar ancho y posición del sidebar para evitar que se "achique" */
 .sidebar-custom {
-    background-color: var(--color-primary) !important; 
-    width: 250px; /* ancho fijo */
+    background-color: rgba(var(--color-primary-rgb), 0.25) !important;
+    width: 250px;
+    /* ancho fijo */
     min-width: 250px;
     position: fixed;
-    top: 56px; /* ajustar si tu top-row tiene otra altura */
+    top: 56px;
+    /* ajustar si tu top-row tiene otra altura */
     left: 0;
     height: calc(100vh - 56px);
     overflow-y: auto;
     z-index: 1020;
     transition: transform 0.25s ease, width 0.25s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Desktop: mantener espacio para el contenido principal */
 @media (min-width: 768px) {
     .main-content {
-        margin-left: 220px; /* coincide con el width del sidebar */
+        margin-left: 220px;
+        /* coincide con el width del sidebar */
     }
 
     /* Asegurar que collapse no oculte el sidebar en desktop */
@@ -254,9 +277,11 @@ main {
     .sidebar-custom {
         transform: translateX(-100%);
     }
+
     .sidebar-custom.show {
         transform: translateX(0);
     }
+
     .main-content {
         margin-left: 0;
     }
@@ -272,10 +297,11 @@ main {
 /* Los items del menú */
 .sidebar-custom .nav-item {
     margin-bottom: 0.125rem;
-    background-color: transparent !important; /* Transparente para que se vea el fondo */
+    background-color: transparent !important;
+    /* Transparente para que se vea el fondo */
 }
 
-.sidebar-custom .nav-link > .d-flex {
+.sidebar-custom .nav-link>.d-flex {
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -295,18 +321,21 @@ main {
     margin: 0 8px;
     font-weight: 500;
     transition: all 0.2s ease;
-    background-color: transparent !important; /* Fondo transparente */
+    background-color: transparent !important;
+    /* Fondo transparente */
 }
 
 .sidebar-custom .nav-link:hover {
-    background-color: #E0F0FF80 !important; /* más suave el bg-rgb */
+    background-color: #E0F0FF80 !important;
+    /* más suave el bg-rgb */
     color: var(--color-text-secondary) !important;
     transform: translateX(4px);
     transition: all 0.2s ease-in-out;
 }
 
 .sidebar-custom .nav-link.active {
-    background-color: #E0f0ffAD !important; /* un poco más visible el bg-rgb*/
+    background-color: #E0f0ffAD !important;
+    /* un poco más visible el bg-rgb*/
     color: var(--color-text-secondary) !important;
     font-weight: 600;
     border-radius: 6px;
@@ -324,9 +353,9 @@ main {
 
 /* ===================== TITLES ========================= */
 .title-style {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
 }
 
 /* ================================= LOGIN PAGE ============================ */
@@ -339,169 +368,182 @@ main {
 
 
 .login-card {
-    background: rgba(255, 255, 255, 0.85); /* tarjeta transparente */
+    background: rgba(255, 255, 255, 0.85);
+    /* tarjeta transparente */
     padding: 40px;
     width: 420px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    backdrop-filter: blur(6px); /* efecto vidrio (glassmorphism) */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+    /* efecto vidrio (glassmorphism) */
 }
 
 
 /* ===================== CARDS ========================== */
 /* Contenedor de la tarjeta */
 .card {
-  background-color: var(--color-surface);
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Encabezado de la tabla - más específico */
 .table thead tr:first-child {
-  background-color: var(--color-primary) !important;
-  color: var(--color-text) !important;
-  border-bottom: 2px solid var(--color-primary-dark);
-  text-align: center;
+    background-color: var(--color-primary) !important;
+    color: var(--color-text) !important;
+    border-bottom: 2px solid var(--color-primary-dark);
+    text-align: center;
 }
 
 /* Celdas del encabezado */
 .table thead th {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  border: none;
-  border-right: 1px solid var(--color-primary-dark);
-  background-color: transparent !important; /* Importante para que herede del tr */
-  position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border: none;
+    border-right: 1px solid var(--color-primary-dark);
+    background-color: transparent !important;
+    /* Importante para que herede del tr */
+    position: relative;
 }
+
 /* Eliminar el borde derecho del último th */
 .table thead th:last-child {
-  border-right: none;
+    border-right: none;
 }
 
 /* Filas */
 .table tbody tr {
-  background-color: var(--color-surface);
-  transition: background-color 0.2s ease;
+    background-color: var(--color-surface);
+    transition: background-color 0.2s ease;
 }
 
 /* Hover de filas */
 .table-hover tbody tr:hover {
-  background-color: var(--color-primary);
+    background-color: var(--color-primary);
 }
 
 /* Celdas */
 .table td {
-  color: var(--color-text-secondary);
-  vertical-align: middle;
-  border-color: #ccc;
+    color: var(--color-text-secondary);
+    vertical-align: middle;
+    border-color: #ccc;
 }
 
 /* Texto principal dentro de celdas */
 .table td strong {
-  color: var(--color-text);
+    color: var(--color-text);
 }
 
 /* Badges personalizados*/
 .badge {
-  border-radius: 6px;
-  font-size: 0.75rem;
-  padding: 4px 8px;
-  font-weight: 600; /* Para mejor legibilidad */
-  text-transform: uppercase; /* Para consistencia */
+    border-radius: 6px;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    font-weight: 600;
+    /* Para mejor legibilidad */
+    text-transform: uppercase;
+    /* Para consistencia */
 }
 
 /* Badge para Vencido */
 .badge.bg-danger {
-  background-color: var(--color-error) !important;
-  color: white !important;
+    background-color: var(--color-error) !important;
+    color: white !important;
 }
 
 /* Badge para Próximo */
 .badge.bg-warning {
-  background-color: #ffcc02 !important;
-  color: var(--color-text-secondary) !important;
+    background-color: #ffcc02 !important;
+    color: var(--color-text-secondary) !important;
 }
 
 /* Badge para Vigente */
 .badge.bg-success {
-  background-color: #28a745 !important;
-  color: white !important;
+    background-color: #28a745 !important;
+    color: white !important;
 }
 
 /* Badge para Stock bajo (ya lo tienes) */
 .badge.bg-warning {
-  background-color: var(--color-accent);
-  color: var(--color-text-secondary);
+    background-color: var(--color-accent);
+    color: var(--color-text-secondary);
 }
 
 /* Estados */
 .vencido {
-  background-color: var(--color-error);
-  color: var(--color-text-invert);
+    background-color: var(--color-error);
+    color: var(--color-text-invert);
 }
+
 .proximo {
-  background-color: var(--color-accent);
-  color: var(--color-text-invert);
+    background-color: var(--color-accent);
+    color: var(--color-text-invert);
 }
+
 .vigente {
-  background-color: var(--color-secondary);
-  color: var(--color-text);
+    background-color: var(--color-secondary);
+    color: var(--color-text);
 }
 
 /* ======================= BUTTONS ============================= */
 .btn-primary {
-  background-color: var(--color-secondary);
-  color: var(--color-text);
-  border: var(--color-text);
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: var(--color-text);
 }
+
 .btn-primary:hover {
-  background-color: #B8E0D2AA;
-  color: var(--color-text-secondary);
-  border: var(--color-secondary);
+    background-color: #B8E0D2AA;
+    color: var(--color-text-secondary);
+    border: var(--color-secondary);
 }
+
 .btn-primary:active {
-  background-color: #2ad085 !important;
-  color: var(--color-text-invert) !important;
-  transition: background-color 0.3s ease;
+    background-color: #2ad085 !important;
+    color: var(--color-text-invert) !important;
+    transition: background-color 0.3s ease;
 }
 
 .btn-add {
-   background-color: rgba(var(--color-primary-rgb), 0.8) !important;
-   color: var(--color-text) !important;
-   border: none;
-   border-radius: 8px;
-   padding: 10px 20px;
-   font-weight: 600;
-   transition: all 0.3s ease;
-   box-shadow: 0 4px 6px rgba(42, 208, 133, 0.2);
+    background-color: rgba(var(--color-primary-rgb), 0.8) !important;
+    color: var(--color-text) !important;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(42, 208, 133, 0.2);
 }
 
 .btn-add:hover {
-  background-color: #A3C4F3AA !important;
-  color: var(--color-text-secondary) !important;
-  border-color: var(--color-primary-dark) !important;
-  box-shadow: 0 3px 6px rgba(11, 43, 64, 0.6);
+    background-color: #A3C4F3AA !important;
+    color: var(--color-text-secondary) !important;
+    border-color: var(--color-primary-dark) !important;
+    box-shadow: 0 3px 6px rgba(11, 43, 64, 0.6);
 }
 
 .btn-add:active {
-  background-color: var(--color-primary-dark) !important;
-  color: var(--color-text-invert) !important;
-  border-color: var(--color-primary-dark) !important;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(42, 208, 133, 0.2);
+    background-color: var(--color-primary-dark) !important;
+    color: var(--color-text-invert) !important;
+    border-color: var(--color-primary-dark) !important;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(42, 208, 133, 0.2);
 }
 
 
 .btn-danger {
-  background-color: var(--color-accent);
-  color: var(--color-text);
+    background-color: var(--color-accent);
+    color: var(--color-text);
 }
+
 .btn-danger:hover {
-  background-color: #F4A896AA;
-  color: var(--color-text-secondary);
-  border: var(--color-accent);
+    background-color: #F4A896AA;
+    color: var(--color-text-secondary);
+    border: var(--color-accent);
 }
 
 .btn-search {
@@ -514,29 +556,33 @@ main {
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(42, 208, 133, 0.2);
 }
+
 .btn-search:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(8, 63, 38, 0.728);
     background: linear-gradient(135deg, #2ad085, var(--color-secondary));
 }
+
 .btn-search:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(42, 208, 133, 0.2);
 }
 
 .btn-clean {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
+
 .btn-clean:hover {
-  background-color: #e09d9daa;
-  color: var(--color-text-secondary);
-  border: var(--color-secondary);
+    background-color: #e09d9daa;
+    color: var(--color-text-secondary);
+    border: var(--color-secondary);
 }
+
 .btn-clean:active {
-  background-color: #e94343 !important;
-  color: var(--color-text-invert) !important;
-  transition: background-color 0.3s ease;
+    background-color: #e94343 !important;
+    color: var(--color-text-invert) !important;
+    transition: background-color 0.3s ease;
 }
 
 /* ================= VENTANAS PERSONALIZADOS ================== */
@@ -548,13 +594,14 @@ main {
 }
 
 .modal-header-create {
-    background-color: var(--color-primary) !important; 
+    background-color: var(--color-primary) !important;
     color: var(--color-text) !important;
     border-bottom: 2px solid #218838;
 }
 
 .modal-header.bg-success {
-    background-color: #3ed792 !important; /*Color de movimientos*/
+    background-color: #3ed792 !important;
+    /*Color de movimientos*/
     color: var(--color-text-invert) !important;
 }
 
@@ -567,7 +614,7 @@ main {
     background: white;
     border: 1px solid #dee2e6;
     border-radius: 0 0 6px 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     max-height: 200px;
     overflow-y: auto;
@@ -584,7 +631,8 @@ main {
     border-bottom: none;
 }
 
-.suggestion-hover, .suggestion-item:hover {
+.suggestion-hover,
+.suggestion-item:hover {
     background-color: #d0e1f8;
     color: var(--color-text);
     text-decoration: solid;
@@ -637,6 +685,7 @@ label.form-label.busqueda-label {
     font-weight: 500;
     transition: all 0.3s ease;
 }
+
 .swal-btn-ok:hover {
     background-color: var(--color-bg-rgb);
     transform: scale(1.05);
@@ -653,20 +702,22 @@ label.form-label.busqueda-label {
     color: white;
 }
 
-    .blazor-error-boundary::after {
-        content: "An error has occurred."
-    }
+.blazor-error-boundary::after {
+    content: "An error has occurred."
+}
 
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
     color: var(--bs-secondary-color);
     text-align: end;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
     text-align: start;
 }
 
@@ -785,6 +836,7 @@ label.form-label.busqueda-label {
         transform: translateX(100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
