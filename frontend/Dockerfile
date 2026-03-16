@@ -21,6 +21,7 @@ COPY --from=publish /app/publish .
 
 # Variables de entorno por defecto
 ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_ENVIRONMENT=Production
 ENV BACKEND_URL=http://localhost:8000
 
 # El puerto 8080 es usado por defecto por la imagen aspnet

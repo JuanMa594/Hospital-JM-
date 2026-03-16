@@ -84,6 +84,7 @@ if (!app.Environment.IsDevelopment())
 app.UseAntiforgery();
 
 // Static assets and interactive components mapping.
+app.UseStaticFiles();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
